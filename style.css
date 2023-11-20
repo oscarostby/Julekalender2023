@@ -1,6 +1,4 @@
 
-<<<<<<< Updated upstream
-=======
 body {
     background: url(./bg.jpg) no-repeat top center #82d8cb;
     background-size: cover;
@@ -280,8 +278,9 @@ body {
             text-decoration: none;
       }
   
->>>>>>> Stashed changes
-.body{
+
+
+    .body{
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
@@ -303,11 +302,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 39%;
     }
     
     .footer-logo {
-    margin-right: 10%;
+    width: 50px; 
+    height: 50px; 
+    margin-right: 10px;
     }
     
     .footer-text {
@@ -318,16 +318,13 @@ body {
     font-size: 36px;
     color: #e74c3c;
     }
-    
-
-
-    @media(max-width: 700px) {
-        .body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-        }
+  
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
     }
+
     
     .footer {
     background-color: #f1abad;
@@ -340,29 +337,48 @@ body {
     box-sizing: border-box;
     left: 0px;
     position: relative;
-    }
-    
-    .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2%;
-    }
-    
-    .footer-logo {
-    width: 50px; /* Adjust the size as needed */
-    height: 50px; /* Adjust the size as needed */
-    margin-right: 10px;
-    }
-    
-    .footer-text {
-    font-size: 18px;
-    }
-    
-    .christmas-tree {
-    font-size: 36px;
-    color: #e74c3c;
-    }
-    
-    
 
+
+    .header {
+      background-color: #f1abad; 
+      color: #ecf0f1; 
+      padding: 20px;
+      text-align: center;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .header p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .header img {
+      width: 100px; /* Adjust the size as needed */
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .header-buttons {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      display: flex;
+    }
+
+    .header-buttons button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #2ecc71; /* Emerald Green */
+      color: #ecf0f1; /* Light Gray/White */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
