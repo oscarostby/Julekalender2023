@@ -2,182 +2,181 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-// Middleware to check if the content is unlocked
+// Middleware to check if the content is locked
 app.use((req, res, next) => {
   const currentDate = new Date();
-  const Day1Date = new Date('12.01.2023'); // Replace with your target date
-  const Day2Date = new Date('12.02.2023');
-  const Day3Date = new Date('12.03.2023');
-  const Day4Date = new Date('12.04.2023');
-  const Day5Date = new Date('12.05.2023');
-  const Day6Date = new Date('12.06.2023');
-  const Day7Date = new Date('12.07.2023');
-  const Day8Date = new Date('12.08.2023');
-  const Day9Date = new Date('12.09.2023');
-  const Day10Date = new Date('12.10.2023');
-  const Day11Date = new Date('12.11.2023');
-  const Day12Date = new Date('12.12.2023');
-  const Day13Date = new Date('12.13.2023');
-  const Day14Date = new Date('12.14.2023');
-  const Day15Date = new Date('12.15.2023');
-  const Day16Date = new Date('12.16.2023');
-  const Day17Date = new Date('12.17.2023');
-  const Day18Date = new Date('12.18.2023');
-  const Day19Date = new Date('12.19.2023');
-  const Day20Date = new Date('12.20.2023');
-  const Day21Date = new Date('12.21.2023');
-  const Day22Date = new Date('12.22.2023');
-  const Day23Date = new Date('12.23.2023');
-  const Day24Date = new Date('12.24.2023');
+  const Day1Date = new Date('1.12.2023'); // Replace with your target date
+  const Day2Date = new Date('2.12.2023');
+  const Day3Date = new Date('3.12.2023');
+  const Day4Date = new Date('4.12.2023');
+  const Day5Date = new Date('5.12.2023');
+  const Day6Date = new Date('6.12.2023');
+  const Day7Date = new Date('7.12.2023');
+  const Day8Date = new Date('8.12.2023');
+  const Day9Date = new Date('9.12.2023');
+  const Day10Date = new Date('10.12.2023');
+  const Day11Date = new Date('11.12.2023');
+  const Day12veDate = new Date('12.12.2023');
+  const Day13Date = new Date('13.12.2023');
+  const Day14Date = new Date('14.12.2023');
+  const Day15Date = new Date('15.12.2023');
+  const Day16Date = new Date('16.12.2023');
+  const Day17Date = new Date('17.12.2023');
+  const Day18Date = new Date('18.12.2023');
+  const Day19Date = new Date('19.12.2023');
+  const Day20Date = new Date('20.12.2023');
+  const Day21Date = new Date('21.12.2023');
+  const Day22Date = new Date('22.12.2023');
+  const Day23Date = new Date('23.12.2023');
+  const Day24Date = new Date('24.12.2023');
 
-  if (currentDate >= Day1Date) {
-    next();
+  if (currentDate < Day24Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day1Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day2Date) {
-    next();
+if (currentDate < Day23Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day3Date) {
-    next();
+if (currentDate < Day22Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day1Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day4Date) {
-    next();
+if (currentDate < Day21Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day5Date) {
-    next(); 
+if (currentDate < Day20Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day1Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day6Date) {
-    next();
+if (currentDate < Day19Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
+  }
+if (currentDate < Day18Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
+  } else {
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day7Date) {
-    next(); 
+if (currentDate < Day17Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day1Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day8Date) {
-    next();
+if (currentDate < Day16Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day9Date) {
-    next(); 
+if (currentDate < Day15Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day1Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day10Date) {
-    next();
+  if (currentDate < Day14Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day11Date) {
-    next();
+if (currentDate < Day13Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day1Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day12Date) {
-    next();
+if (currentDate < Day12Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day13Date) {
-    next();
+if (currentDate < Day11Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day1Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day14Date) {
-    next();
+if (currentDate < Day10Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day15Date) {
-    next(); 
+if (currentDate < Day9Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day1Date.toDateString());
+    next(); // Continue to the next middleware or route
+  }
+if (currentDate < Day8Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
+  } else {
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day16Date) {
-    next();
+if (currentDate < Day7Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day17Date) {
-    next(); 
+if (currentDate < Day6Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day1Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day18Date) {
-    next();
+if (currentDate < Day5Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day19Date) {
-    next(); 
+if (currentDate < Day4Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day1Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day20Date) {
-    next();
+if (currentDate < Day3Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day21Date) {
-    next();
+if (currentDate < Day2Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day22Date) {
-    next();
+if (currentDate < Day1Date) {
+    res.send('Content is locked until ' + targetDate.toDateString());
   } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
+    next(); // Continue to the next middleware or route
   }
 
-  if (currentDate >= Day23Date) {
-    next();
-  } else {
-    res.send('Content is locked until ' + Day2Date.toDateString());
-  }
-
-  if (currentDate >= Day24Date) {
-    next();
-  } else {
-    res.send('Content is locked until ' + Day24Date.toDateString());
-  }
 });
 
-// Route for the unlocked content
-app.get('/unlocked-content', (req, res) => {
-  res.send('This is the unlocked content!');
+// Route for the locked content
+app.get('/locked-content', (req, res) => {
+  res.send('This is the locked content!');
 });
 
 // Start the server
