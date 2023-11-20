@@ -1,6 +1,4 @@
 
-<<<<<<< Updated upstream
-=======
 body {
     background: url(./bg.jpg) no-repeat top center #82d8cb;
     background-size: cover;
@@ -279,8 +277,7 @@ body {
       footer a:hover {
             text-decoration: none;
       }
-  
->>>>>>> Stashed changes
+
 .body{
     margin: 0;
     padding: 0;
@@ -363,6 +360,5 @@ body {
     font-size: 36px;
     color: #e74c3c;
     }
-    
-    
+
 
