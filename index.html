@@ -41,15 +41,31 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const checkboxes = document.querySelectorAll('input[type="checkbox"][data-day]');
-        checkboxes.forEach(checkbox => {
+document.addEventListener('DOMContentLoaded', () => {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][data-day]');
+    
+    // Get today's date
+    const today = new Date();
+    const currentMonth = today.getMonth() + 1; // JavaScript months are 0-indexed
+    const currentDate = today.getDate();
+
+    checkboxes.forEach(checkbox => {
+        const day = parseInt(checkbox.getAttribute('data-day'));
+
+        // Enable checkbox only if it's the correct day and month (December)
+        if (currentMonth === 11 && currentDate >= day) {
             checkbox.addEventListener('click', function() {
-                const day = this.getAttribute('data-day');
-                window.location.href = day + '.html';
+                // Redirect to the specified path with the current day
+                window.location.href = `./December/Day_${day}/content.html`;
             });
-        });
+        } else {
+            // Disable the checkbox if it's not the correct day
+            checkbox.disabled = true;
+        }
     });
+});
+
+
 </script>
 <footer>
     Laget av, Oscar, Abubakar, Tord, Sigurd og Marius ☃️
