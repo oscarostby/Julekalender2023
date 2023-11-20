@@ -367,3 +367,16 @@ body {
     color: #e74c3c;
     }
 
+
+
+    footer {
+        text-align: center;
+        padding: 2em 0;
+      }  
+        footer a {
+            color: #2e313d;
+        } 
+          footer a:hover {
+                text-decoration: none;
+          }
+      
