@@ -1,0 +1,22 @@
+{
+  "name": "julekalender2023",
+  "version": "1.0.0",
+  "description": "Julekalender",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarostby/Julekalender2023.git"
+  },
+  "author": "Oscar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscarostby/Julekalender2023/issues"
+  },
+  "homepage": "https://github.com/oscarostby/Julekalender2023#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
