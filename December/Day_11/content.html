@@ -2,9 +2,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <title>11.Desember</title>
 </head>
-<body>
+<body id="pageElleven">
     <h1>Desember 11</h1>
+
+         <!--IKKE RØR DENNE KODEN JOBB OVER DENNE KOMMENTAREN -->
+         <script>
+            $(document).on("pagecreate", "#pageElleven", function(){
+                $("body").on("swipeleft", function() {
+                    window.location.href = '../Day_12/content.html';
+                });
+            });
+    
+        $(document).on("pagecreate", "#pageElleven", function(){
+            $("body").on("swiperight", function() {
+                window.location.href = '../Day_10/content.html';
+            });
+        });
+        </script>
 </body>
 </html>

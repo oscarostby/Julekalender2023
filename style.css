@@ -400,6 +400,110 @@ footer:hover {
   text-align: center;
 }
 
+
+    left: 0px;
+    }
+    .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 39%;
+    }
+    
+    .footer-logo {
+    margin-right: 10%;
+    }
+    
+    .footer-text {
+    font-size: 18px;
+    }
+    
+    .christmas-tree {
+    font-size: 36px;
+    color: #e74c3c;
+    }
+    
+
+
+    @media(max-width: 700px) {
+        .body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    }
+
+
+    .footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+
+  
+  
+    
+
+
+
+
+footer {
+  text-align: center;
+  padding: 2em 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative; /* Endre til "fixed" for å feste footer nederst på siden */
+  bottom: 0; /* Plasser footer nederst på siden */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertikalt */
+  z-index: 2; /* Angi en z-indeks for å plassere footer over innhold */
+}
+
+footer a {
+  color: #2e313d;
+}
+
+footer:hover {
+  text-decoration: none;
+  background: url(logo.png);
+}
+
+
+
+
+          /* Add this to your style.css file */
+.popup {
+  display: none;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
 #close-popup {
   margin-top: 10px;
   cursor: pointer;
