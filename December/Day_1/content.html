@@ -1,62 +1,145 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <title>1.Desember</title>
-    
+    <title>Login and Quiz</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .centered-form {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+        }
+        .centered-form .form-field {
+            margin-bottom: 15px;
+        }
+        .centered-form .form-field label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .centered-form .form-field input[type="email"],
+        .centered-form .form-field input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .centered-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .centered-form button:hover {
+            background: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
-<body id="pageone">
-    <h1>Desember 01</h1>
-    
+<body>
 
-    <a href=""></a>
+<div id="loginForm" class="centered-form hidden">
+    <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+    </div>
+    <div class="form-field">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+    </div>
+    <button onclick="loginUser()">Login</button>
+</div>
 
-    <!--IKKE RØR DENNE KODEN JOBB OVER DENNE KOMMENTAREN -->
-    <script>
-$(document).on("pagecreate", "#pageone", function() {
-    $("body").on("swipeleft", function() {
-        $(this).addClass('swipe-animate');
-        setTimeout(function() {
-            window.location.href = '../Day_2/content.html';
-        }, 500);
-    }).on("swiperight", function() {
-        $(this).addClass('swipe-animate-right');
-        // Define action for swipe right here
-    });
-});
+<div id="registerForm" class="centered-form hidden">
+    <div class="form-field">
+        <label for="newEmail">Email</label>
+        <input type="email" id="newEmail" required>
+    </div>
+    <div class="form-field">
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" required>
+    </div>
+    <button onclick="registerUser()">Register</button>
+</div>
 
+<button onclick="showLoginForm()">Login</button>
+<button onclick="showRegisterForm()">Register</button>
 
-    </script>
-        <style>
-            /* Add your CSS animation styles here */
-            .swipe-animate {
-                animation: swipeEffect 0.5s forwards;
-            }
-    
-            @keyframes swipeEffect {
-                from { opacity: 1; transform: translateX(0); }
-                to { opacity: 0; transform: translateX(-100%); }
-            }
-            .swipe-animate-right {
-        animation: swipeEffectRight 0.5s forwards;
+<script>
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID",
+        measurementId: "YOUR_MEASUREMENT_ID"
+    };
+
+    const app = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth(app);
+
+    function showLoginForm() {
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('registerForm').style.display = 'none';
     }
-    
-    @keyframes swipeEffectRight {
-        from { opacity: 1; transform: translateX(0); }
-        to { opacity: 0; transform: translateX(100%); }
+
+    function showRegisterForm() {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('registerForm').style.display = 'block';
     }
-    body {
-        animation: fadeInEffect 1s ease-in;
+
+    function loginUser() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        auth.signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user);
+                // Redirect to quiz or show quiz here
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     }
-    
-    @keyframes fadeInEffect {
-        from { opacity: 0; }
-        to { opacity: 1; }
+
+    function registerUser() {
+        const email = document.getElementById('newEmail').value;
+        const password = document.getElementById('newPassword').value;
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user);
+                // Redirect to quiz or show quiz here
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     }
-    
-    
-        </style>
+</script>
+
 </body>
 </html>
