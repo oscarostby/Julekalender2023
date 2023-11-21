@@ -15,11 +15,48 @@
 
     <!--IKKE RØR DENNE KODEN JOBB OVER DENNE KOMMENTAREN -->
     <script>
-       $(document).on("pagecreate", "#pageone", function(){
-                $("body").on("swipeleft", function() {
-                    window.location.href = '../Day_2/content.html';
-                });
-            });
-    </script> 
+$(document).on("pagecreate", "#pageone", function() {
+    $("body").on("swipeleft", function() {
+        $(this).addClass('swipe-animate');
+        setTimeout(function() {
+            window.location.href = '../Day_2/content.html';
+        }, 500);
+    }).on("swiperight", function() {
+        $(this).addClass('swipe-animate-right');
+        // Define action for swipe right here
+    });
+});
+
+
+    </script>
+        <style>
+            /* Add your CSS animation styles here */
+            .swipe-animate {
+                animation: swipeEffect 0.5s forwards;
+            }
+    
+            @keyframes swipeEffect {
+                from { opacity: 1; transform: translateX(0); }
+                to { opacity: 0; transform: translateX(-100%); }
+            }
+            .swipe-animate-right {
+        animation: swipeEffectRight 0.5s forwards;
+    }
+    
+    @keyframes swipeEffectRight {
+        from { opacity: 1; transform: translateX(0); }
+        to { opacity: 0; transform: translateX(100%); }
+    }
+    body {
+        animation: fadeInEffect 1s ease-in;
+    }
+    
+    @keyframes fadeInEffect {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    
+        </style>
 </body>
 </html>
