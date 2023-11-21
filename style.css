@@ -1,6 +1,6 @@
 
 body {
-    background: url(./bg3.png) no-repeat top center #82d8cb;
+    background: url(./bg3.png) no-repeat top center #ffffff;
     background-size: cover;
   }
   
@@ -335,32 +335,34 @@ body {
 
 
 
-    footer {
-        text-align: center;
-        padding: 2em 0;
-        background-color: rgba(255, 255, 255, 0.2);
-        position: absolute;
-        display: flex;
-        padding: 30px;
-        justify-content: center;
-        align-items: center; /* Center vertically */
-      }  
-        footer a {
-            color: #2e313d;
-        } 
-          footer:hover {
-                text-decoration: none;
-                background: url(logo.png);
-                z-index: 2;
-          }
-      
+footer {
+  text-align: center;
+  padding: 2em 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative; /* Endre til "fixed" for å feste footer nederst på siden */
+  bottom: 0; /* Plasser footer nederst på siden */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertikalt */
+  z-index: 2; /* Angi en z-indeks for å plassere footer over innhold */
+}
+
+footer a {
+  color: #2e313d;
+}
+
+footer:hover {
+  text-decoration: none;
+  background: url(logo.png);
+}
+
 
 
 
           /* Add this to your style.css file */
 .popup {
   display: none;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
