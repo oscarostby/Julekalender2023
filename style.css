@@ -1,6 +1,6 @@
 
 body {
-    background: url(./bg.jpg) no-repeat top center #82d8cb;
+    background: url(./IMG/bg3.png) no-repeat top center #82d8cb;
     background-size: cover;
   }
   
@@ -272,113 +272,135 @@ body {
     padding: 2em 0;
   }  
     footer a {
-        color: #f1abad;
+        color: #2e313d;
     } 
       footer a:hover {
             text-decoration: none;
       }
   
 
+.body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  }
+  
+  .footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  display: flex;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  left: 0px;
+  }
+  
+  .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 39%;
+  }
+  
+  .footer-logo {
+  margin-right: 10%;
+  }
+  
+  .footer-text {
+  font-size: 18px;
+  }
+  
+  .christmas-tree {
+  font-size: 36px;
+  color: #e74c3c;
+  }
+  
 
-    .body{
+
+    @media(max-width: 700px) {
+        .body{
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
     }
-    
+  }
+
+
     .footer {
-    background-color: #f1abad;
+    background-color: #2c3e50;
     color: #ecf0f1;
-    display: flex;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
-    left: 0px;
-    }
-    
-    .footer-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    }
-    
-    .footer-logo {
-    width: 50px; 
-    height: 50px; 
-    margin-right: 10px;
-    }
-    
-    .footer-text {
-    font-size: 18px;
-    }
-    
-    .christmas-tree {
-    font-size: 36px;
-    color: #e74c3c;
-    }
-  
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-    }
-
-    
-    .footer {
-    background-color: #f1abad;
-    color: #ecf0f1;
-    display: flex;
     text-align: center;
-    position: absolute;
+    position: relative;
     bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     box-sizing: border-box;
-    left: 0px;
-    position: relative;
+    z-index: 1;
+}
 
 
-    .header {
-      background-color: #f1abad; 
-      color: #ecf0f1; 
-      padding: 20px;
-      text-align: center;
-      box-sizing: border-box;
-      position: relative;
-    }
+  
+  
+    
 
-    .header h1 {
-      font-size: 36px;
-      margin: 0;
-    }
 
-    .header p {
-      font-size: 18px;
-      margin: 10px 0;
-    }
 
-    .header img {
-      width: 100px; /* Adjust the size as needed */
-      height: auto;
-      border-radius: 50%;
-    }
 
-    .header-buttons {
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      display: flex;
-    }
+footer {
+  text-align: center;
+  padding: 2em 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative; /* Endre til "fixed" for å feste footer nederst på siden */
+  bottom: 0; /* Plasser footer nederst på siden */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertikalt */
+  z-index: 2; /* Angi en z-indeks for å plassere footer over innhold */
+}
 
-    .header-buttons button {
-      margin-left: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #2ecc71; /* Emerald Green */
-      color: #ecf0f1; /* Light Gray/White */
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+footer a {
+  color: #2e313d;
+}
+
+footer:hover {
+  text-decoration: none;
+  background: url(logo.png);
+}
+
+
+
+
+          /* Add this to your style.css file */
+.popup {
+  display: none;
+
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#close-popup {
+  margin-top: 10px;
+  cursor: pointer;
+}
