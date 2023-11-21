@@ -277,7 +277,6 @@ body {
       footer a:hover {
             text-decoration: none;
       }
-  
 
 .body{
     margin: 0;
@@ -324,13 +323,35 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
+        }
     }
+
+}
+
+
+
+    
+    .footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 
   
   
     
+
 
 
 
@@ -354,6 +375,7 @@ body {
                 z-index: 2;
           }
       
+
 
 
 
@@ -381,3 +403,4 @@ body {
   margin-top: 10px;
   cursor: pointer;
 }
+
