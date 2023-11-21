@@ -1,6 +1,6 @@
 
 body {
-    background: url(./bg3.png) no-repeat top center #82d8cb;
+    background: url(./IMG/bg3.png) no-repeat top center #82d8cb;
     background-size: cover;
   }
   
@@ -326,11 +326,7 @@ body {
         }
     }
 
-}
 
-
-
-    
     .footer {
     background-color: #2c3e50;
     color: #ecf0f1;
@@ -382,7 +378,7 @@ body {
           /* Add this to your style.css file */
 .popup {
   display: none;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
