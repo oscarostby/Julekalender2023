@@ -271,14 +271,14 @@ body {
   
   
   /* footer styles */
-  footer {
+footer {
     text-align: center;
     padding: 2em 0;
   }  
     footer a {
         color: #2e313d;
     } 
-      footer a:hover {
+        footer a:hover {
             text-decoration: none;
       }
   
@@ -346,39 +346,6 @@ body {
     box-sizing: border-box;
     z-index: 1;
 }
-
-
-  
-  
-    
-
-
-
-
-footer {
-  text-align: center;
-  padding: 2em 0;
-  background-color: rgba(255, 255, 255, 0.2);
-  position: relative; /* Endre til "fixed" for å feste footer nederst på siden */
-  bottom: 0; /* Plasser footer nederst på siden */
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Center vertikalt */
-  z-index: 2; /* Angi en z-indeks for å plassere footer over innhold */
-}
-
-footer a {
-  color: #2e313d;
-}
-
-footer:hover {
-  text-decoration: none;
-  background: url(logo.png);
-}
-
-
           /* Add this to your style.css file */
 .popup {
   display: none;
