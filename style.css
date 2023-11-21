@@ -1,11 +1,19 @@
 
 body {
 
-    background: url(./bg3.png) no-repeat top center #ffffff;
+    background: url(./IMG/bg3.png) no-repeat top center #ffffff;
 
     background: url(./IMG/bg3.png) no-repeat top center #82d8cb;
 
     background-size: cover;
+
+   
+      background-position: 30%;
+        
+
+    @media only screen and (min-width: 500px){
+      background-position: ;
+    }     
   }
   
   /* title graphic */
@@ -21,6 +29,8 @@ body {
   }
   
   /* mobile first grid layout */
+ /* @media only screen and (max-width: 500px){  */
+
   .grid-1 {
     display: grid;
     width: 96%;
@@ -41,7 +51,7 @@ body {
                             "d6       d17     d8"
                             "d19      d24     d21";
   }
-  
+
   /* media query */
   @media only screen and (min-width: 500px) {
     
@@ -323,7 +333,7 @@ footer {
     
 
 
-    @media(max-width: 700px) {
+    @media(max-width: 500px) {
         .body{
     margin: 0;
     padding: 0;
