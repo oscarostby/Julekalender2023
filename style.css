@@ -1,6 +1,9 @@
 
 body {
-    background: url(./bg.jpg) no-repeat top center #82d8cb;
+
+    background: url(./IMG/bg3.png) no-repeat top center #82d8cb;
+    background: url(./bg3.png) no-repeat top center #ffffff;
+    background: url(./IMG/bg3.png) no-repeat top center #82d8cb;
     background-size: cover;
   }
   
@@ -62,145 +65,145 @@ body {
     grid-area: d1;
     }
     .day-1 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-2 {
         grid-area: d2;
       }
       .day-2 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-3 {
         grid-area: d3;
       }
       .day-3 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-4 {
         grid-area: d4;
       }
       .day-4 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-5 {
         grid-area: d5;
       }
       .day-5 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-6 {
         grid-area: d6;
       }
       .day-6 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-7 {
         grid-area: d7;
       }
       .day-7 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-8 {
         grid-area: d8;
       }
       .day-8 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-9 {
         grid-area: d9;
       }
       .day-9 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-10 {
         grid-area: d10;
       }
       .day-10 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-11 {
         grid-area: d11;
       }
       .day-11 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-12 {
         grid-area: d12;
       }
       .day-12 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-13 {
         grid-area: d13;
       }
       .day-13 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-14 {
         grid-area: d14;
       }
       .day-14 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-15 {
         grid-area: d15;
       }
       .day-15 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-16 {
         grid-area: d16;
       }
       .day-16 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-17 {
         grid-area: d17;
       }
       .day-17 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-18 {
         grid-area: d18;
       }
       .day-18 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-19 {
         grid-area: d19;
       }
       .day-19 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-20 {
         grid-area: d20;
       }
       .day-20 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-21 {
         grid-area: d21;
       }
       .day-21 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-22 {
         grid-area: d22;
       }
       .day-22 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-23 {
         grid-area: d23;
       }
       .day-23 .back {
-        background: url();
+        background: url(./siu.png);
       }
       .day-24 {
         grid-area: d24;
       }
       .day-24 .back {
-        background: url();
+        background: url(./siu.png);
       }
       
   
@@ -253,7 +256,7 @@ body {
         background-size: contain;
         background-position: center center;
         background-repeat: no-repeat;
-        background-color: #2e313d;
+        background-color: rgba(255, 255, 255, 0.8);
         transform: rotateY(180deg);
     }
   
@@ -267,16 +270,17 @@ body {
   
   
   /* footer styles */
-  footer {
+footer {
     text-align: center;
     padding: 2em 0;
   }  
     footer a {
         color: #2e313d;
     } 
-      footer a:hover {
+        footer a:hover {
             text-decoration: none;
       }
+  
 
 .body{
     margin: 0;
@@ -323,10 +327,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-        }
     }
 
-    
+
+
     .footer {
     background-color: #2c3e50;
     color: #ecf0f1;
@@ -343,42 +347,67 @@ body {
     z-index: 1;
 }
 
+
+footer {
+  text-align: center;
+  padding: 2em 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative; /* Endre til "fixed" for å feste footer nederst på siden */
+  bottom: 0; /* Plasser footer nederst på siden */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertikalt */
+  z-index: 2; /* Angi en z-indeks for å plassere footer over innhold */
+}
+
+footer a {
+  color: #2e313d;
+}
   
-  
-    
-    .footer-content {
+
+    .footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2%;
-    }
-    
-    .footer-logo {
-    width: 50px; /* Adjust the size as needed */
-    height: 50px; /* Adjust the size as needed */
-    margin-right: 10px;
-    }
-    
-    .footer-text {
-    font-size: 18px;
-    }
-    
-    .christmas-tree {
-    font-size: 36px;
-    color: #e74c3c;
-    }
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
 
 
 
+/* Add this to your style.css file */
+.popup {
+  display: none;
 
-    footer {
-        text-align: center;
-        padding: 2em 0;
-      }  
-        footer a {
-            color: #2e313d;
-        } 
-          footer a:hover {
-                text-decoration: none;
-          }
-      
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#close-popup {
+  margin-top: 10px;
+  cursor: pointer;
+}
