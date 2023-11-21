@@ -1,6 +1,10 @@
 
 body {
+
     background: url(./bg3.png) no-repeat top center #ffffff;
+
+    background: url(./IMG/bg3.png) no-repeat top center #82d8cb;
+
     background-size: cover;
   }
   
@@ -325,6 +329,22 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     }
+
+
+    .footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 
@@ -362,6 +382,8 @@ footer:hover {
           /* Add this to your style.css file */
 .popup {
   display: none;
+
+  position: relative;
   position: absolute;
   top: 0;
   left: 0;
