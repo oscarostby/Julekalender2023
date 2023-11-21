@@ -344,13 +344,6 @@ body {
 }
 
 
-  
-  
-    
-
-
-
-
 footer {
   text-align: center;
   padding: 2em 0;
@@ -375,9 +368,7 @@ footer:hover {
 }
 
 
-
-
-          /* Add this to your style.css file */
+/* Add this to your style.css file */
 .popup {
   display: none;
 
