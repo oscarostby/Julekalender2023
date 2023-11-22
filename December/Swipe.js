@@ -57,9 +57,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let targetDay;
 
         if (direction === 'next') {
-            targetDay = currentDay >= 24 ? 1 : currentDay + 1; // Loop back to day 1 if it's the last day
+            targetDay = currentDay >= 24 ? 1 : currentDay + 1;
         } else if (direction === 'previous') {
-            targetDay = currentDay <= 1 ? 24 : currentDay - 1; // Loop to day 24 if it's the first day
+            targetDay = currentDay <= 1 ? 24 : currentDay - 1;
+        }
+
+        let today = getToday();
+        if (targetDay > today) {
+            console.log('Du kan ikke navigere til fremtidige dager!');
+            return; // Avbryter navigasjon hvis targetDay er i fremtiden
         }
 
         window.location.href = `/December/Day_${targetDay}/content.html`;
@@ -70,4 +76,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let dayMatch = path.match(/Day_(\d+)/);
         return dayMatch ? parseInt(dayMatch[1], 10) : 1;
     }
+
+    // bytt fra getMonth() === 10, till getMonth() === 11 i desember
+
+    function getToday() {
+        let today = new Date();
+        return today.getMonth() === 10 ? today.getDate() : 31; // Returnerer dagens dato kun i desember, ellers 31
+    }
+
 });
