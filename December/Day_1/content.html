@@ -2,10 +2,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>1.Desember</title>
+    
 </head>
-<body>
-    <h1>December</h1>
-    <script src="../Swipe.js"></script>
-</body>
+<body id="pageone">
+    <h1>December 01</h1>
+    
+
+    <script>
+        $(document).on("pagecreate", "#pageone", function(){
+            $("body").on("swipeleft", function() {
+                window.location.href = '../Day_2/content.html';
+            });
+        });
+
+    $(document).on("pagecreate", "#pageone", function(){
+        $("body").on("swiperight", function() {
+            window.location.href = '../../index.html';
+        });
+    });
+    </script>
 </html>
