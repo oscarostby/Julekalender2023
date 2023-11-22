@@ -1,10 +1,16 @@
 
 body {
 
-    background: url(./IMG/bg3.png) no-repeat top center #82d8cb;
-    background: url(./bg3.png) no-repeat top center #ffffff;
-    background: url(./IMG/bg3.png) no-repeat top center #82d8cb;
+    background: url(./IMG/bg3.png) no-repeat top center #ffffff;
     background-size: cover;
+
+   
+      background-position: 30%;
+        
+
+    @media only screen and (min-width: 500px){
+      background-position: ;
+    }     
   }
   
   /* title graphic */
@@ -20,6 +26,8 @@ body {
   }
   
   /* mobile first grid layout */
+ /* @media only screen and (max-width: 500px){  */
+
   .grid-1 {
     display: grid;
     width: 96%;
@@ -40,7 +48,7 @@ body {
                             "d6       d17     d8"
                             "d19      d24     d21";
   }
-  
+
   /* media query */
   @media only screen and (min-width: 500px) {
     
@@ -230,6 +238,7 @@ body {
     transition: all 300ms;
     border: 2px dashed transparent;
     border-radius: 10px;
+    border-color: rgba(255, 255, 255, 0.2);
   }
   
     .door div {
@@ -322,92 +331,117 @@ footer {
     
 
 
-    @media(max-width: 700px) {
+    @media(max-width: 500px) {
         .body{
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
     }
+  }
 
-
-
-    .footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  footer {
     text-align: center;
-    position: relative;
+    padding: 1em 30px; /* Vertical padding of 1em, Horizontal padding of 30px */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for snow theme */
+    color: #000000; /* Dark text color for contrast */
+    position: relative; /* Keep 'relative' or change to 'fixed' as needed */
     bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 1;
-}
-
-
-footer {
-  text-align: center;
-  padding: 2em 0;
-  background-color: rgba(255, 255, 255, 0.2);
-  position: relative; /* Endre til "fixed" for å feste footer nederst på siden */
-  bottom: 0; /* Plasser footer nederst på siden */
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Center vertikalt */
-  z-index: 2; /* Angi en z-indeks for å plassere footer over innhold */
-}
-
-footer a {
-  color: #2e313d;
-}
+    left: 50%; /* Start at the middle of the page */
+    transform: translateX(-50%); /* Center the footer */
+    display: inline-block; /* Only take up as much width as its content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    font-family: 'Helvetica Neue', sans-serif; /* Modern, clean font */
+    font-size: 1rem; /* Adjust size as needed */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    margin: 0 auto; /* Centralize footer if it's not fixed */
+    max-width: calc(100% - 60px); /* Ensures some space on the sides */
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    footer {
+      padding: 1em 15px; /* Smaller padding on the sides */
+      max-width: calc(100% - 30px); /* Reduce maximum width on smaller screens */
+    }
+  }
   
 
-    .footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 1;
-}
+
+
 
 
 
 /* Add this to your style.css file */
+
+
 .popup {
   display: none;
-
-  position: relative;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
   justify-content: center;
   align-items: center;
 }
 
 .popup-content {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white for the popup content background */
+  color: #161616; /* Dark text for better readability */
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
+  border: 1px solid #000000; /* Thinner, festive color border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+  position: relative; /* For absolute positioning of the snowflake */
 }
 
+
 #close-popup {
-  margin-top: 10px;
+  background-color: #385052;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
   cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for the button */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#close-popup:hover {
+  background-color: #2e313d; /* Slightly darker red on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+
+
+
+
+
+
+#snowflakes-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.snowflake {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
 }
