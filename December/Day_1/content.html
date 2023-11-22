@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<<<<<<< Updated upstream
     <title>1.Desember</title>
     
 </head>
@@ -59,5 +60,26 @@ $(document).on("pagecreate", "#pageone", function() {
     
     
         </style>
+=======
+    <title>December 1</title>
+</head>
+<body id="pageone">
+    <h1>December 01</h1>
+    
+
+    <script>
+        $(document).on("pagecreate", "#pageone", function(){
+            $("body").on("swipeleft", function() {
+                window.location.href = '../Day_2/content.html';
+            });
+        });
+
+    $(document).on("pagecreate", "#pageone", function(){
+        $("body").on("swiperight", function() {
+            window.location.href = '../../index.html';
+        });
+    });
+    </script>
+>>>>>>> Stashed changes
 </body>
 </html>
