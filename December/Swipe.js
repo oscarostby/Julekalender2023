@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function getToday() {
         let today = new Date();
-        return today.getMonth() === 10 ? today.getDate() : 31; // Returnerer dagens dato kun i desember, ellers 31
+        return today.getMonth() === 11 ? today.getDate() : 31; // Returnerer dagens dato kun i desember, ellers 31
     }
 
 });
