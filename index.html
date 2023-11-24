@@ -4,6 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script type='text/javascript'>
+
+        (function()
+        {
+          if( window.localStorage )
+          {
+            if( !localStorage.getItem('firstLoad') )
+            {
+              localStorage['firstLoad'] = true;
+              window.location.reload();
+            }  
+            else
+              localStorage.removeItem('firstLoad');
+          }
+        })();
+        
+        </script>
 </head>
 <body>
 
@@ -50,51 +67,6 @@
 
 
 <div id="snowflakes-container"></div>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"][data-day]');
-    const popup = document.getElementById('popup');
-    const popupMessage = document.getElementById('popup-message');
-    const closePopupButton = document.getElementById('close-popup');
-    
-    // Get today's date
-    const today = new Date();
-    const currentMonth = today.getMonth() + 1; // JavaScript months are 0-indexed
-    const currentDate = today.getDate();
-
-    checkboxes.forEach(checkbox => {
-        const day = parseInt(checkbox.getAttribute('data-day'));
-
-        checkbox.addEventListener('click', function(event) {
-            const isChecked = checkbox.checked;
-
-            if (currentMonth === 11) {
-                if (currentDate >= day) {
-                    // Redirect to the specified path with the current day
-                    window.location.href = `./December/Day_${day}/content.html`;
-                } else {
-                    event.preventDefault(); // Prevent the checkbox from being checked
-                    // Show the popup with the message
-                    popupMessage.textContent = "Bruh, det er ikke denne dagen enda.";
-                    popup.style.display = 'flex';
-                }
-            }
-        });
-    });
-
-    // Close the popup when the "OK" button is clicked
-    closePopupButton.addEventListener('click', function() {
-        popup.style.display = 'none';
-    });
-});
-
-
-
-
-
-
-</script>
 <footer>
     Laget av, Oscar, Abubakar, Tord, Sigurd og Marius ☃️
 </footer>
