@@ -28,6 +28,9 @@ body {
   /* mobile first grid layout */
  /* @media only screen and (max-width: 500px){  */
 
+
+
+
   .grid-1 {
     display: grid;
     width: 96%;
