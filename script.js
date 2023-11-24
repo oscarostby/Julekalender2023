@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
     snowflake.style.animationDelay = Math.random() * 5 + 's';
     document.getElementById('snowflakes-container').appendChild(snowflake);
   
-    // Remove snowflake after it falls
+    // Fjerner snøfnugg etter den faller
     setTimeout(() => {
       snowflake.remove();
     }, (parseFloat(snowflake.style.animationDuration) + parseFloat(snowflake.style.animationDelay)) * 1000);
   }
   
-  setInterval(createSnowflake, 50); // Adjust the interval to add more/less snowflakes
+  setInterval(createSnowflake, 50); // Oppretter snøfnugg hvert 50. millisekund
   
 
 
@@ -43,20 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get today's date
     const today = new Date();
-    const currentMonth = today.getMonth() + 1; // JavaScript months are 0-indexed
+    const currentMonth = today.getMonth() + 1;
     const currentDate = today.getDate();
 
     checkboxes.forEach(checkbox => {
         const day = parseInt(checkbox.getAttribute('data-day'));
 
-        // Check if the checkbox state is stored in local storage
+       
         const storedState = localStorage.getItem(`day${day}`);
         if (storedState === 'checked') {
             checkbox.checked = true;
-            checkbox.disabled = true; // Disable the checkbox if already checked
+            checkbox.disabled = true; 
         }
 
-        // Disable checkboxes for future days
         if (currentMonth === 11 && currentDate < day) {
             checkbox.disabled = true;
         }
@@ -65,17 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const isChecked = checkbox.checked;
 
             if (isChecked) {
-                if (currentMonth === 11) { // Adjusted to December
+                if (currentMonth === 11) { 
                     if (currentDate >= day) {
                         // Redirect to the specified path with the current day
                         window.location.href = `./December/Day_${day}/content.html`;
                     } else {
-                        // Show the popup with the message
+                        // Viser popuppen med meldingen
                         popupMessage.textContent = "Bruh, det er ikke denne dagen enda.";
                         popup.style.display = 'flex';
                     }
                 } else {
-                    // Show the popup with the message
+                    // Viser popuppen med meldingen
                     popupMessage.textContent = "Bruh, det er ikke desember enda.";
                     popup.style.display = 'flex';
                 }
@@ -87,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Close the popup when the "OK" button is clicked
+    // Lukker popuppen etter at man klikker "OK"
     closePopupButton.addEventListener('click', function() {
         popup.style.display = 'none';
     });
