@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+ 
   document.addEventListener('DOMContentLoaded', () => {
     const checkboxes = document.querySelectorAll('input[type="checkbox"][data-day]');
     const popup = document.getElementById('popup');
@@ -52,11 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const storedState = localStorage.getItem(`day${day}`);
         if (storedState === 'checked') {
             checkbox.checked = true;
-            checkbox.disabled = false; // Disable the checkbox if already checked
-        }
-        
-        if(checkbox.checked === true) {
-          checkbox.disabled = false;
+            checkbox.disabled = true; // Disable the checkbox if already checked
         }
 
         // Disable checkboxes for future days
@@ -95,4 +92,5 @@ document.addEventListener('DOMContentLoaded', () => {
         popup.style.display = 'none';
     });
 });
+
 
